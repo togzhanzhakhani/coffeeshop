@@ -1,0 +1,168 @@
+[
+    {
+
+        "categories": [],
+        "url": "https://web.telegram.org/k/#@justrandomletters",
+        "name": "Lager",
+        "price": 3000.0,
+        "description": "Lagers are a newer style of beer with two key differences from ales. Lagers ferment for a long time at a low temperature, and they rely on bottom-fermenting yeasts, which sink to the bottom of the fermenting tank to do their magic.\r\n\r\nLagers are common among European countries, including Czechia, Germany, and the Netherlands, as well as in Canada, where they make up more than half of all beer sales.",
+        "image_url": "Lager",
+        "rating": 3.8,
+        "count": 10
+    },
+    {
+        
+        "categories": [],
+        "url": "https://www.instagram.com/az1tchhh/",
+        "name": "Blonde Ale",
+        "price": 1900.0,
+        "description": "This easy drinking ale is a summer favorite, thanks to its light malt sweetness and trace of hops, which add aroma. As the name suggests, blonde ales have a pale color and a clear body. They tend to be crisp and dry, with few traces of bitterness, rather than hop-heavy or dank.",
+        "image_url": "Blonde_Ale",
+        "rating": 4.0,
+        "count": 14
+    },
+    {
+        
+        "categories": [
+            {
+                "id": 5,
+                "name": "Coffee"
+            }
+        ],
+        "url": "https://www.instagram.com/az1tchhh/",
+        "name": "Latte",
+        "price": 1300.0,
+        "description": "As the most popular coffee drink out there, the latte is comprised of a shot of espresso and steamed milk with just a touch of foam. It can be ordered plain or with a flavor shot of anything from vanilla to pumpkin spice",
+        "image_url": "Latte",
+        "rating": 4.9,
+        "count": 20
+    },
+    {
+        
+        "categories": [
+            {
+                "id": 5,
+                "name": "Coffee"
+            }
+        ],
+        "url": "https://web.telegram.org/k/#@justrandomletters",
+        "name": "Cappuccino",
+        "price": 1450.0,
+        "description": "Cappuccino is a latte made with more foam than steamed milk, often with a sprinkle of cocoa powder or cinnamon on top. Sometimes you can find variations that use cream instead of milk or ones that throw in flavor shot, as well.",
+        "image_url": "Cappuccino",
+        "rating": 4.3,
+        "count": 23
+    },
+    {
+        
+        "categories": [
+            {
+                "id": 5,
+                "name": "Coffee"
+            }
+        ],
+        "url": "https://web.telegram.org/k/#@justrandomletters",
+        "name": "Espresso",
+        "price": 1300.0,
+        "description": "An espresso shot can be served solo or used as the foundation of most coffee drinks, like lattes and macchiatos. If you’re an at-home barista, this Breville Bambino and espresso accessories will turn your house into your own coffee shop. Figure out how an espresso is different from coffee.\r\n\r\nAlways on the go? This portable espresso maker lets you brew your coffee without needing a power source, so you can take it with you wherever you need it!",
+        "image_url": "Espresso",
+        "rating": 4.6,
+        "count": 30
+    },
+    {
+       
+        "categories": [
+            {
+                "id": 5,
+                "name": "Coffee"
+            }
+        ],
+        "url": "https://www.instagram.com/az1tchhh/",
+        "name": "Red Eye",
+        "price": 2000.0,
+        "description": "Named after those pesky midnight flights, a red eye can cure any tiresome morning. A full cup of hot coffee with an espresso shot mixed in, this will definitely get your heart racing.",
+        "image_url": "Red Eye",
+        "rating": 3.7,
+        "count": 10
+    },
+    {
+        
+        "categories": [
+            {
+                "id": 2,
+                "name": "Beverages"
+            }
+        ],
+        "url": "https://web.telegram.org/k/#@justrandomletters",
+        "name": "Coca-Cola",
+        "price": 400.0,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image_url": "Coca-Cola",
+        "rating": 3.9,
+        "count": 105
+    },
+    {
+        
+        "categories": [
+            {
+                "id": 2,
+                "name": "Beverages"
+            }
+        ],
+        "url": "https://www.instagram.com/az1tchhh/",
+        "name": "Fanta",
+        "price": 400.0,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image_url": "Fanta",
+        "rating": 3.9,
+        "count": 100
+    },
+    {
+        
+        "categories": [
+            {
+                "id": 2,
+                "name": "Beverages"
+            }
+        ],
+        "url": "https://web.telegram.org/k/#@justrandomletters",
+        "name": "Sprite",
+        "price": 400.0,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image_url": "Sprite",
+        "rating": 4.0,
+        "count": 100
+    },
+    {
+        
+        "categories": [
+            {
+                "id": 2,
+                "name": "Beverages"
+            }
+        ],
+        "url": "https://www.instagram.com/az1tchhh/",
+        "name": "Maxi tea",
+        "price": 350.0,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image_url": "Maxi tea",
+        "rating": 4.3,
+        "count": 200
+    },
+    {
+        
+        "categories": [
+            {
+                "id": 6,
+                "name": "Lemonade"
+            }
+        ],
+        "url": "https://www.instagram.com/az1tchhh/",
+        "name": "Buratino",
+        "price": 250.0,
+        "description": "Very tasty buratino",
+        "image_url": "Buratino",
+        "rating": 3.6,
+        "count": 10
+    }
+]

@@ -8,29 +8,29 @@ class TypeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Type
-        fields = '__all__'
-        read_only_fields ='__all__'
+        fields = ('type',)
+        read_only_fields =('__all__',)
 
 
 class SortSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Sort
-        fields = '__all__'
-        read_only_fields ='__all__'
+        fields = ('sort', )
+        read_only_fields =('__all__',)
 
 
 class CategorySerializer(serializers.ModelSerializer):
-    type = TypeSerializer
-    sort = SortSerializer
+    type = TypeSerializer()
+    sort = SortSerializer()
     class Meta:
         model = Category
         fields = ('type', 'sort')
-        read_only_fields = '__all__'
+
 
 class ProductSerializer(serializers.ModelSerializer):
-    category = CategorySerializer
+    category = CategorySerializer()
 
     class Meta:
         model = Product
-        fields = '__all__'
+        fields = ('id', 'name', 'category', 'price', 'description', 'count', 'image_url', 'url')

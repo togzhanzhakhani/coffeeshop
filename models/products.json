@@ -1,12 +1,9 @@
 [
 {
   "categories": {
-	"type":{
-    		"$oid": "651309562b01275d8fe51e53"
-  	},
-	"sort":{
-    		"$oid": "65130a612b01275d8fe51e59"
-  	}
+	"type":"Hot drinks",
+	"sort":"Coffee"
+  	
    },
   "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   "name": "Latte",
@@ -19,12 +16,8 @@
 
 {
   "categories": {
-	"type":{
-    		"$oid": "651309562b01275d8fe51e54"
-  	},
-	"sort":{
-    		"$oid": "65130a612b01275d8fe51e59"
-  	}
+	"type":"Cold drinks",	
+	"sort":"Coffee"
    },
   "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   "name": "Ice Latte",
@@ -37,10 +30,8 @@
 
 {
   "categories": {
-	"type":{
-    		"$oid": "651309562b01275d8fe51e55"
-  	},
-	"sort": null
+	"type":"Desert",
+	"sort":"None"		
    },
   "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   "name": "Spain Cheesecake",

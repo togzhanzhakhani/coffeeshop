@@ -10,6 +10,9 @@ import { BasketComponent } from './basket/basket.component';
 import { CategoryComponent } from './category/category.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from "@angular/forms";
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -24,7 +27,12 @@ import { RegistrationComponent } from './registration/registration.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    RouterModule.forRoot([
+      {path: '', component: ProductListComponent}
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

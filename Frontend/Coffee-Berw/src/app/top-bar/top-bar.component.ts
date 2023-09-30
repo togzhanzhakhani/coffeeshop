@@ -10,9 +10,9 @@ import {normalizePolyfills} from "@angular-devkit/build-angular/src/utils/normal
 })
 export class TopBarComponent {
   @Output() productsFiltered = new EventEmitter<Product[]>();
-  searchText: any = '';
-  products!:Product[];
-  isLogged=true;
+  searchText: string = '';
+  products!: Product[];
+  isLogged = true;
   constructor(private productService: ProductService) {
   }
   ngOnInit() {

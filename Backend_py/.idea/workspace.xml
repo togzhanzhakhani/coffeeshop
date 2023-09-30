@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e3016f7d-38aa-47e2-a163-fadb97c9befa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
     </list>
@@ -88,7 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1695800435897</updated>
       <workItem from="1695800447542" duration="7034000" />
-      <workItem from="1695912374493" duration="599000" />
+      <workItem from="1695912374493" duration="2767000" />
     </task>
     <servers />
   </component>

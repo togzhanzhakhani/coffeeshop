@@ -31,7 +31,9 @@ import {RouterModule} from "@angular/router";
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      {path: '', component: ProductListComponent}
+      {path: '', component: ProductListComponent},
+      {path: 'basket', component: BasketComponent},
+      {path: 'login', component: AuthenticationComponent}
     ])
   ],
   providers: [],

@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3016f7d-38aa-47e2-a163-fadb97c9befa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/assets/asdas.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +87,7 @@
       <updated>1695800435897</updated>
       <workItem from="1695800447542" duration="7034000" />
       <workItem from="1695912374493" duration="2767000" />
+      <workItem from="1696248479295" duration="2027000" />
     </task>
     <servers />
   </component>

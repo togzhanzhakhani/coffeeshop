@@ -1,1 +1,31 @@
-<p>top-bar works!</p>
+
+<div class = "top_bar box-row">
+  <div class = "logo">
+    <a [routerLink] = "['']"></a>
+  </div>
+  <div class = "searching_panel">
+    <input [(ngModel)] = "searchText"
+           type = "text"
+           placeholder = "Cappuccino..."
+           class = "searching_panel_input input_change">
+    <a (click)="Search()" class = "search_button">Search</a>
+  </div>
+  <div class = "menu box-row">
+    <a [routerLink] = "['/basket']"></a>
+    <ng-container *ngIf="isLogged">
+      <div class = "box-row">
+        <div class = "box-row LogOut" (click)="logout()">
+          <span class = "LogService">Sign Out</span>
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="!isLogged">
+      <div class = "box-row">
+        <a [routerLink] = "['/login']" class = "menu_tool box-row">
+
+          <span class = "LogService">Sign In</span>
+        </a>
+      </div>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,111 @@
+.box-row{
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+}
+.top_bar{
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #1c1e1f;
+  height: 70px;
+  box-shadow: 0 2px 10px 1px darkgray;
+}
+.top_bar_buttons{
+  width: 40px;
+}
+.logo{
+  flex: auto;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.logo_img{
+  width: 300px;
+}
+.searching_panel{
+  flex: auto;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 70%;
+
+}
+.box-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.log_out{
+  height: 40px;
+}
+.searching_panel_input{
+  width: 90%;
+  height: 55%;
+  background-color: #181a1b;
+  color: whitesmoke;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: medium;
+}
+.search_button{
+  width: 60px;
+  height: 35px;
+}
+.search_button:hover{
+  cursor: pointer;
+}
+.menu{
+  flex: auto;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+#menu_button{
+  margin-left: 10px;
+}
+.menu_tool{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+.LogService{
+  margin-left: 10px;
+  font-size: 1.3rem;
+  font-weight: 450;
+}
+.LogOut:hover{
+  cursor: pointer;
+}
+#menu_button:hover{
+  cursor: pointer;
+  color: forestgreen;
+}
+#menu_button:active{
+  color: limegreen;
+}
+#sign_in{
+  width:30px;
+}
+#sign_in:hover{
+  cursor: pointer;
+}
+
+a{
+  color: white;
+  font-weight: 450;
+}
+#navBar{
+  margin-left: 30px;
+}
+
+.basket{
+  width:40px;
+  margin-right: 50px;
+}
+.basket:hover{
+  cursor: pointer;
+
+}
+

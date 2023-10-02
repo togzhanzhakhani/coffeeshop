@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/product-list/product-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/product-list/product-list.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/product-list/product-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/product-list/product-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/top-bar/top-bar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/top-bar/top-bar.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +88,7 @@
       <updated>1695800435897</updated>
       <workItem from="1695800447542" duration="7034000" />
       <workItem from="1695912374493" duration="2767000" />
+      <workItem from="1696248479295" duration="1034000" />
     </task>
     <servers />
   </component>

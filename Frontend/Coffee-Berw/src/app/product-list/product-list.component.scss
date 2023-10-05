@@ -1,0 +1,139 @@
+.box-row-product{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-evenly;
+}
+.products_list{
+  display: flex;
+  margin-top: 40px;
+  justify-content: center;
+}
+.product_window{
+  color: white;
+  border: none;
+  border-radius: 10px;
+  background-color: #1d2021;
+  box-shadow: 0 1px 4px 0 darkgray;
+  width: 80%;
+
+}
+.product_image_box{
+  width: 250px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+.product_img{
+  width: 190px;
+  height: 190px;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+.product_img:hover{
+  width: 230px;
+  height: 230px;
+}
+.product_about{
+  width: 50%;
+  margin-right: 100px;
+}
+.product_title{
+  display: flex;
+  justify-content: left;
+
+}
+.title{
+  color: white;
+}
+.title_set{
+  color:white;
+}
+.product_description_text{
+  text-align: left;
+  font-size: 20px;
+}
+.product_about{
+
+}
+.product_title{
+  text-align: left;
+}
+
+.product_price_box{
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-end;
+  margin: 0 10px;
+}
+.price_paragraph, .rating_paragraph{
+  font-size: 20px;
+}
+
+.product_price{
+  margin: 0 0 0 20px;
+  font-weight: 600;
+  font-style: oblique;
+}
+.product_price .box-column{
+  font-size: 20px;
+  align-content: space-between;
+}
+.rating{
+  margin: 0 0 0 10px;
+  font-weight: 500;
+  font-size: x-large;
+  font-style: normal;
+  font-family: monospace;
+}
+.buy_box{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.buy_button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: cornflowerblue;
+  color: white;
+}
+.buy_button:hover{
+  cursor: pointer;
+}
+.share_button{
+  background-color: cornflowerblue;
+}
+.share_button:hover{
+  background-color: #286ce6; /*darker*/
+}
+.order_button{
+  background-color: limegreen;
+}
+.order_button:hover{
+  background-color: #28a428;
+}
+
+.description{
+  display: flex;
+  justify-content: left;
+  font-size: larger;
+  font-weight: 500;
+  font-style: oblique;
+}
+
+.no_product{
+  font-weight: 500;
+  margin-top: 200px;
+  color: red;
+  z-index: 4;
+  background-color: red;
+  font-family: monospace;
+}

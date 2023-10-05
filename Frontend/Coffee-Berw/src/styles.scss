@@ -1,4 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+.input_change{
+  border: 1px;
+  border-radius: 2px;
+}
+.input_change:hover::placeholder{
+  color: #bec3c9;
+}
+.input_change:focus{
+  outline-offset: 0;
+  outline-width: 0;
+  outline-color: #1475e5;
+  box-shadow: 0 0 10px -10px #1475e5;
+}
 body{
-  margin: 0
+  font-family: "Segoe UI", sans-serif;
+  background-color: #131516 ;
+  margin: 0;
+  color: white;
+}
+.box-column{
+  display: flex;
+  flex-direction: column;
+
+}
+.box-row{
+  display: flex;
+  flex-direction: row;
+}
+button{
+  border: none;
+  border-radius: 5px;
+}
+a{
+  text-decoration: none;
 }

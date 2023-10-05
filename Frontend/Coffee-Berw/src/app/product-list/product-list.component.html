@@ -20,7 +20,7 @@
         </div>
         <div class = "product_description">
           <p *ngIf = "product.description" class = "product_description">
-            <span class = "description">Description</span>: <br>
+            <span class = "description">Description:</span> <br>
             <span class = "product_description_text">{{product.description}}</span>
           </p>
         </div>
@@ -39,9 +39,8 @@
           </div>
         </ng-container>
         <ng-container *ngIf="isLogged">
-          <div class = "sharing_box box-row">
-            <button class = "sharing order_button" style = "margin-right: 30px" >Add</button>
-            <button class = "sharing share_button">Details</button>
+          <div class = "buy_box box-row">
+            <button class = "buy_button order_button" style="cursor: pointer">Add</button>
           </div>
         </ng-container>
       </div>

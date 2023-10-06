@@ -44,3 +44,14 @@ def list_of_commentaries_of_a_product(request, id):
         serializer = CommentSerializer(commentaries, many=True)
         return Response(serializer.data)
 
+@api_view(['GET', 'POST'])
+def product_rating(request, id):
+    try:
+        product = Product.objects.get(id=id)
+    except Product.DoesNotExist as e:
+        return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+    if request.method == 'GET':
+        ratings = product.rating.all()
+        serializer = RatingSerializer(ratings, many=True)
+        return Response(serializer.data)

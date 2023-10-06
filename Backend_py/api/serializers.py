@@ -67,3 +67,11 @@ class CommentSerializer(serializers.ModelSerializer):
         model = Commentary
         fields = ('id', 'user', 'text', 'created_at', 'product')
         read_only_fields = ('id', 'created_at', 'product')
+
+
+class RatingSerializer(serializers.ModelSerializer):
+    user = UserField()
+    class Meta:
+        model = Rating
+        fields = ('id', 'user', 'product')
+        read_only_fields = ('id', 'product')

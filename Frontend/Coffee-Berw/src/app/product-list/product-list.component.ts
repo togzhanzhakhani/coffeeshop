@@ -10,7 +10,7 @@ import {AppComponent} from "../app.component";
 })
 export class ProductListComponent implements OnInit{
   currentProducts!: Product[];
-
+  isItemOnHover:boolean = false;
   isLogged = AppComponent.isLogged;
   constructor(private productService: ProductService) {
   }
@@ -24,5 +24,9 @@ export class ProductListComponent implements OnInit{
   onProductsFound(products: Product[]){
     this.currentProducts = products;
     console.log("products in product component", this.currentProducts);
+  }
+
+  toggleSpecialItem(exp:boolean){
+    this.isItemOnHover = exp;
   }
 }

@@ -1,13 +1,15 @@
-.box-row-product{
+.box-column-product{
   display: flex;
-  flex-direction: row;
-  text-align: center;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
 }
 .products_list{
-  display: flex;
-  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px;
   justify-content: center;
+  margin: 40px 20px 0 20px;
+
 }
 .product_window{
   color: white;
@@ -15,30 +17,37 @@
   border-radius: 10px;
   background-color: #1d2021;
   box-shadow: 0 1px 4px 0 darkgray;
-  width: 80%;
+  padding: 10px;
+
 
 }
 .product_image_box{
-  width: 250px;
-  height: 400px;
+  height: 220px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 10px;
+  margin: 5px 5px;
+
 }
 .product_img{
   width: 190px;
   height: 190px;
-  transition: 0.5s;
+  transition: 0.5s ease;
   border-radius: 10px;
 }
 .product_img:hover{
-  width: 230px;
-  height: 230px;
+  cursor: pointer; //here we set pointer, and with ngClass we will change its size.
+}
+.special_img_incr:hover{
+  width: 215px;
+  height: 215px;
+
 }
 .product_about{
-  width: 50%;
-  margin-right: 100px;
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 .product_title{
   display: flex;
@@ -47,6 +56,10 @@
 }
 .title{
   color: white;
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
 }
 .title_set{
   color:white;
@@ -56,29 +69,29 @@
   font-size: 20px;
 }
 .product_about{
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .product_title{
-  text-align: left;
+  text-align: center;
 }
 
 .product_price_box{
   display: flex;
   justify-content: space-between;
-  align-content: flex-end;
+  align-content: center;
   margin: 0 10px;
-}
-.price_paragraph, .rating_paragraph{
-  font-size: 20px;
 }
 
 .product_price{
   margin: 0 0 0 20px;
-  font-weight: 600;
-  font-style: oblique;
+  font-family: 'Montserrat';
+  font-weight: 100;
+  font-size: 24px;
+  line-height: 24px;
 }
 .product_price .box-column{
-  font-size: 20px;
   align-content: space-between;
 }
 .rating{
@@ -91,7 +104,7 @@
 .buy_box{
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
+  align-items: center;
 }
 .buy_button{
   display: flex;

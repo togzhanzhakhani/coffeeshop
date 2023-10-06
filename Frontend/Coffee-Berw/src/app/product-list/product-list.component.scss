@@ -1,0 +1,152 @@
+.box-column-product{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.products_list{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px;
+  justify-content: center;
+  margin: 40px 20px 0 20px;
+
+}
+.product_window{
+  color: white;
+  border: none;
+  border-radius: 10px;
+  background-color: #1d2021;
+  box-shadow: 0 1px 4px 0 darkgray;
+  padding: 10px;
+
+
+}
+.product_image_box{
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 5px;
+
+}
+.product_img{
+  width: 190px;
+  height: 190px;
+  transition: 0.5s ease;
+  border-radius: 10px;
+}
+.product_img:hover{
+  cursor: pointer; //here we set pointer, and with ngClass we will change its size.
+}
+.special_img_incr:hover{
+  width: 215px;
+  height: 215px;
+
+}
+.product_about{
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.product_title{
+  display: flex;
+  justify-content: left;
+
+}
+.title{
+  color: white;
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+}
+.title_set{
+  color:white;
+}
+.product_description_text{
+  text-align: left;
+  font-size: 20px;
+}
+.product_about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product_title{
+  text-align: center;
+}
+
+.product_price_box{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin: 0 10px;
+}
+
+.product_price{
+  margin: 0 0 0 20px;
+  font-family: 'Montserrat';
+  font-weight: 100;
+  font-size: 24px;
+  line-height: 24px;
+}
+.product_price .box-column{
+  align-content: space-between;
+}
+.rating{
+  margin: 0 0 0 10px;
+  font-weight: 500;
+  font-size: x-large;
+  font-style: normal;
+  font-family: monospace;
+}
+.buy_box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buy_button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: cornflowerblue;
+  color: white;
+}
+.buy_button:hover{
+  cursor: pointer;
+}
+.share_button{
+  background-color: cornflowerblue;
+}
+.share_button:hover{
+  background-color: #286ce6; /*darker*/
+}
+.order_button{
+  background-color: limegreen;
+}
+.order_button:hover{
+  background-color: #28a428;
+}
+
+.description{
+  display: flex;
+  justify-content: left;
+  font-size: larger;
+  font-weight: 500;
+  font-style: oblique;
+}
+
+.no_product{
+  font-weight: 500;
+  margin-top: 200px;
+  color: red;
+  z-index: 4;
+  background-color: red;
+  font-family: monospace;
+}

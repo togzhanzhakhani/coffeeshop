@@ -1,15 +1,15 @@
 <app-top-bar (productsFiltered)="onProductsFound($event)"></app-top-bar>
 
-<div>
+<div class = "box-column">
   <div>
     <app-category></app-category>
   </div>
-
+  <div class = "container">
   <div class = "products_list">
-    <div class = "product_window box-column-product" *ngFor="let product of currentProducts">
+    <div class = "product_window box-column-product" *ngFor="let product of currentProducts" >
       <div class = "product_image_box">
         <img
-             class = "product_img special_img_incr" src = "../../assets/productsAlbum/{{product.name}}.png" alt = "{{product.name}}">
+             class = "product_img special_img_incr" src = "../../assets/productsAlbum/{{product.image_url}}.png" alt = "{{product.name}}">
       </div>
       <div class = "product_about">
         <div class = "product_title">
@@ -30,8 +30,8 @@
   <!--            </span>-->
   <!--      </p>-->
         <ng-container *ngIf="!isLogged">
-          <div class = "sharing_box box-row">
-            <p>YOU NEED TO AUTHORISE TO SHARE OR ORDER</p>
+          <div class = "buy_box box-row">
+            <p style="margin-left: 15px">AUTHORISE TO SHARE OR ORDER</p>
           </div>
         </ng-container>
         <ng-container *ngIf="isLogged">
@@ -42,5 +42,6 @@
       </div>
     </div>
 
+  </div>
   </div>
 </div>

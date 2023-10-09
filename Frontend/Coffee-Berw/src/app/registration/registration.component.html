@@ -1,1 +1,46 @@
-<p>registration works!</p>
+<div class = "container box-column">
+  <div class = "image">
+    <a [routerLink]="['']"><img src="../../assets/logo_under.svg" alt = "logo"></a>
+  </div>
+  <div class = "registration_box">
+    <div class = "heading_REG_IN_box">
+      <h2 class = "heading_REG_IN">Registration</h2>
+    </div>
+    <div class = "users_input_fields">
+      <div class = "user_input">
+        <input type = "text"
+               placeholder = "Input Username"
+               class = "user_input_text"
+               [(ngModel)]="username">
+      </div>
+      <div class = "user_input">
+        <input type = "text"
+               placeholder = "Input Email"
+               class = "user_input_text"
+               [(ngModel)]="email">
+      </div>
+      <div class = "user_input">
+        <input type = "text"
+               placeholder = "Input Password"
+               class = "user_input_text"
+               [(ngModel)]="password">
+      </div>
+    </div>
+    <ng-container *ngIf = "somethingWentWrong">
+      <div class = "error_post">
+        <p> {{somethingWentWrong}} </p>
+      </div>
+    </ng-container>
+    <ng-container *ngIf = "success">
+      <div class = "success_post">
+        <p> {{success}} </p>
+      </div>
+    </ng-container>
+    <div class = "user_aid_box box-row">
+      <p class = "user_aid_field hv_acc"><a [routerLink] = "['/login']">Have an account?</a></p>
+    </div>
+    <div class = "sign_up_box">
+      <button class = "sign_up" (click)="register()">Sign Up</button>
+    </div>
+  </div>
+</div>

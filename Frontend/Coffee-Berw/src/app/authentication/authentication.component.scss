@@ -1,0 +1,97 @@
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+.image{
+  width: 200px;
+  margin-bottom: 50px;
+}
+.registration_box{
+  padding: 30px 70px 50px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0.1rem solid lightgray;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 1px 7px 0 darkgray;
+
+}
+.heading_REG_IN_box{
+  margin-bottom: 10px;
+}
+.heading_REG_IN{
+  font-weight: 500;
+  color: black;
+}
+.users_input_fields{
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content:space-between;
+}
+.user_input{
+
+}
+.user_input_text{
+  height: 40px;
+  width: 250px;
+  border: 0.1rem solid lightgray;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.user_input_text:hover{
+  border-color: #286ce6;
+}
+.user_input_text:focus{
+  border-color: #206df7;
+}
+.user_input_text:focus::placeholder{
+  color: #bec3c9;
+}
+.user_input_text:focus{
+  outline-offset: 0;
+  outline-width: 0;
+  outline-color: #1475e5;
+  box-shadow: 0 0 5px -1px #1475e5;
+}
+.user_aid_box{
+  width: 250px;
+}
+.user_aid_field{
+  display: flex;
+  flex: auto;
+  font-size: 15px;
+}
+.hv_acc{
+  display: flex;
+  justify-content: right;
+}
+.sign_in_box{
+  margin-top: 10px;
+  width: 270px;
+  display: flex;
+  height: 50px;
+}
+.sign_in{
+  width: 100%;
+  font-size: 20px;
+  font-weight: 550;
+  background-color: #286ce6;
+  color: white;
+}
+
+.sign_in:hover{
+  cursor: pointer;
+}
+p:hover{
+  cursor: pointer;
+}
+.error_post{
+  color: red;
+}

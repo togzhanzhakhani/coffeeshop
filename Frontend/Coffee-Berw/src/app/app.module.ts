@@ -33,7 +33,9 @@ import {RouterModule} from "@angular/router";
     RouterModule.forRoot([
       {path: '', component: ProductListComponent},
       {path: 'basket', component: BasketComponent},
-      {path: 'login', component: AuthenticationComponent}
+      {path: 'login', component: AuthenticationComponent},
+      {path: 'registration', component: RegistrationComponent},
+      {path: 'user/:id/basket', component: BasketComponent}
     ])
   ],
   providers: [],

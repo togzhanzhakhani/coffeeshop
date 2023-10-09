@@ -2,6 +2,7 @@ import {Component, EventEmitter, Output} from '@angular/core';
 import {Product} from "../models/Product";
 import {ProductService} from "../product.service";
 import {normalizePolyfills} from "@angular-devkit/build-angular/src/utils/normalize-polyfills";
+import {AppComponent} from "../app.component";
 
 @Component({
   selector: 'app-top-bar',
@@ -12,7 +13,7 @@ export class TopBarComponent {
   @Output() productsFiltered = new EventEmitter<Product[]>();
   searchText: string = '';
   products!: Product[];
-  isLogged = true;
+  isLogged:boolean = AppComponent.isLogged;
   constructor(private productService: ProductService) {
   }
   ngOnInit() {
@@ -35,6 +36,9 @@ export class TopBarComponent {
     this.productsFiltered.emit(filteredProducts);
   }
   logout(){
-
+    localStorage.removeItem('token');
+    localStorage.removeItem('userId')
+    AppComponent.isLogged = false;
+    window.location.reload();
   }
 }

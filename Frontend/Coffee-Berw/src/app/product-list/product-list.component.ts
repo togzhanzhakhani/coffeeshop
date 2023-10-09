@@ -12,6 +12,7 @@ export class ProductListComponent implements OnInit{
   currentProducts!: Product[];
   isItemOnHover:boolean = false;
   isLogged = AppComponent.isLogged;
+
   constructor(private productService: ProductService) {
   }
   ngOnInit(): void {

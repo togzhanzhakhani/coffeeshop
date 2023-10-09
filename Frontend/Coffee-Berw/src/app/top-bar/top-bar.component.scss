@@ -70,10 +70,19 @@
   align-items: center;
   margin-right: 20px;
 }
-.LogService{
+.basket-div{
+  margin-right: 10px;
+}
+.basket-div:hover{
+  cursor: pointer;
+}
+.log-service{
   margin-left: 10px;
   font-size: 1.3rem;
   font-weight: 450;
+}
+.log-service:hover{
+  cursor: pointer;
 }
 .LogOut:hover{
   cursor: pointer;

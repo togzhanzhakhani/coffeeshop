@@ -11,11 +11,13 @@
     <a (click)="Search()" class = "search_button">Search</a>
   </div>
   <div class = "menu box-row">
-    <a [routerLink] = "['/basket']"></a>
     <ng-container *ngIf="isLogged">
       <div class = "box-row">
+        <div class = "basket-div">
+          <span [routerLink] = "['/basket']">Basket</span>
+        </div>
         <div class = "box-row LogOut" (click)="logout()">
-          <span class = "LogService">Sign Out</span>
+          <span class = "log-service">Sign Out</span>
         </div>
       </div>
     </ng-container>
@@ -23,7 +25,7 @@
       <div class = "box-row">
         <a [routerLink] = "['/login']" class = "menu_tool box-row">
 
-          <span class = "LogService">Sign In</span>
+          <span class = "log-service">Sign In</span>
         </a>
       </div>
     </ng-container>

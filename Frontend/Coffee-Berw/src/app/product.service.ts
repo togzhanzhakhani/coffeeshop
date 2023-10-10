@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {HttpClient, HttpErrorResponse} from "@angular/common/http";
+import {catchError, Observable} from "rxjs";
 import {Product} from "./models/Product";
+import {Rating} from "./models/Rating";
 
 @Injectable({
   providedIn: 'root'
@@ -14,5 +15,18 @@ export class ProductService {
   getAllProducts(): Observable<Product[]>{
     return this.client.get<Product[]>(`${this.BASE_URL}/products/`);
   }
+  getRatingsForProduct(productId: number): Observable<Rating[]>{
+    return this.client.get<Rating[]>(`${this.BASE_URL}/product/${productId}/ratings/`)
+  }
 
+  putRatingForProduct(productId: number, username:string, rating: number): Observable<Rating>{
+    return this.client.put<Rating>(`${this.BASE_URL}/product/${productId}/ratings/`, {username, rating})
+    //   .pipe(
+    //   catchError(this.handleError)
+    // );
+  }
+
+  // private handleError(error: HttpErrorResponse){
+  //   return error
+  // }
 }

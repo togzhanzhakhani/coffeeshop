@@ -24,6 +24,7 @@ export class AuthenticationComponent {
     this.loginService.getInfoAboutUser(this.username).subscribe(
       data=>{
       AppComponent.usernameID = data.id;
+      localStorage.setItem('username', data.username);
       },
       error => {
         console.log(error);

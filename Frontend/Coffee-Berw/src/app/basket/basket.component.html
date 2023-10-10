@@ -1,14 +1,14 @@
 <app-top-bar></app-top-bar>
-<ng-container *ngIf="isLogged">
-  <h3>Orders:</h3>
-  <div class = "cont">
-    <div class = "products">
-      <div class = "product" *ngFor = "let order of basketList">
-        <p>{{order.total_price}} ---- {{order.created_at}}</p>
-      </div>
-    </div>
-  </div>
-</ng-container>
-<ng-container *ngIf="!isLogged">
-  <h2>Please Log In!</h2>
-</ng-container>
+<!--<ng-container *ngIf="isLogged">-->
+<!--  <h3>Orders:</h3>-->
+<!--  <div class = "cont">-->
+<!--    <div class = "products">-->
+<!--      <div class = "product" *ngFor = "let order of basketList">-->
+<!--        <p>{{order.total_price}} &#45;&#45;&#45;&#45; {{order.created_at}}</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</ng-container>-->
+<!--<ng-container *ngIf="!isLogged">-->
+<!--  <h2>Please Log In!</h2>-->
+<!--</ng-container>-->

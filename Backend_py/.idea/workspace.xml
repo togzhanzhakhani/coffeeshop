@@ -5,33 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3016f7d-38aa-47e2-a163-fadb97c9befa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/models/AuthToken.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/models/User.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/models/UserInfo.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/models/UserRegister.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/models/error handlers/emailRegError.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/assets/productsAlbum/Coca-Cola.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/assets/productsAlbum/Espresso.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/assets/productsAlbum/Lungo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/models/Commentary.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/authentication/authentication.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/authentication/authentication.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/authentication/authentication.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/authentication/authentication.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/authentication/authentication.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/authentication/authentication.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/login.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/login.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/product-detail/product-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/product-detail/product-detail.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/product-detail/product-detail.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/product-detail/product-detail.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/product-detail/product-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/product-detail/product-detail.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/product-list/product-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/product-list/product-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/product-list/product-list.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/product-list/product-list.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/product-list/product-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/product-list/product-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/registration/registration.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/registration/registration.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/registration/registration.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/registration/registration.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/registration/registration.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/registration/registration.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/top-bar/top-bar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/top-bar/top-bar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/top-bar/top-bar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/top-bar/top-bar.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/top-bar/top-bar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Coffee-Berw/src/app/top-bar/top-bar.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +99,7 @@
       <workItem from="1696248479295" duration="2027000" />
       <workItem from="1696836837157" duration="968000" />
       <workItem from="1696853811113" duration="4136000" />
+      <workItem from="1697219133825" duration="5278000" />
     </task>
     <servers />
   </component>

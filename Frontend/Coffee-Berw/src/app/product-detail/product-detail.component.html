@@ -1,1 +1,67 @@
-<p>product-detail works!</p>
+<app-top-bar></app-top-bar>
+
+<div class = "site_container box-column">
+  <div class = "product_detail_box box-row" *ngIf = "product">
+    <div class = "product_image_box">
+      <img src = "../../assets/productsAlbum/{{product.name}}.png" class = "product_img">
+    </div>
+    <div class = "product_about">
+      <div class = "product_title">
+        <h2 id = "heading_title">{{product.name}}</h2>
+      </div>
+      <div class = "product_description">
+        <p *ngIf="product.description" id = "description">{{product.description}}</p>
+      </div>
+    </div>
+    <div class = "product_price_box box-column">
+      <p><span class = "price_paragraph">Price:</span> <span class = "product_price">
+              {{product.price | currency: '₸'}}</span>
+      </p>
+<!--      <p><span class = "rating_paragraph">Rating:</span> <span class = "rating">-->
+<!--              {{product.rating}}-->
+<!--            </span>-->
+<!--      </p>-->
+      <ng-container *ngIf="!isLogged">
+        <div class = "sharing_box box-row">
+          <p>YOU NEED TO AUTHORISE TO SHARE OR ORDER</p>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="isLogged">
+        <div class = "sharing_box box-row">
+          <button class = "sharing order_button" style = "margin-right: 30px" (click)="order(this.username, product.price)">Add</button>
+
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <div class = "box-row" style = "margin-top: 20px">
+    <ng-container *ngIf = "!clicked">
+      <h3 (click)="Click()" id = "click">Click to see comments</h3>
+    </ng-container>
+    <ng-container *ngIf = "clicked">
+      <h3 (click)="Click()" id = "click">Click to hide comments</h3>
+    </ng-container>
+    <div class = "give_comment">
+      <input type = "text"
+             placeholder = "Do you want to comment?"
+             class = "user_input_text"
+             [(ngModel)]="commentFromUser">
+      <button type="submit" class = "submitComment" (click)="submit(this.commentFromUser)">Submit</button>
+    </div>
+  </div>
+  <ng-container *ngIf = "clicked">
+    <div [@fadeInOut]>
+      <div class = "commentary">
+        <div class = "comment_box box-column" *ngFor = "let comment of comments">
+          <div class = "username_box">
+            <p class = "user_name">{{comment.user}} <span class = "created_at">({{comment.created_at}})</span></p>
+          </div>
+          <div class = "comment">
+            <p class = "commentery_text">- {{comment.text}}</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

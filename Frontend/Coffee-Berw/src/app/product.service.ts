@@ -15,6 +15,10 @@ export class ProductService {
   getAllProducts(): Observable<Product[]>{
     return this.client.get<Product[]>(`${this.BASE_URL}/products/`);
   }
+
+  getTheProduct(productId:number): Observable<Product>{
+    return this.client.get<Product>(`${this.BASE_URL}/product/${productId}/`);
+  }
   getRatingsForProduct(productId: number): Observable<Rating[]>{
     return this.client.get<Rating[]>(`${this.BASE_URL}/product/${productId}/ratings/`)
   }

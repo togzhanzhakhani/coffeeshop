@@ -4,44 +4,46 @@
   <div>
     <app-category ></app-category>
   </div>
-  <div class = "container">
-  <div class = "products_list">
-    <div class = "product_window box-column-product" *ngFor="let product of currentProducts" >
-      <div class = "product_image_box">
-        <img
-             class = "product_img special_img_incr" src = "../../assets/productsAlbum/{{product.image_url}}.png" alt = "{{product.name}}">
-      </div>
-      <div class = "product_about">
-        <div class = "product_title">
-          <h3 class = "title">
-            <a class = "title_set" [title]="product.name + ' details'" [routerLink] = "['/product', product.id]">
-              {{ product.name }}
-            </a>
-          </h3>
+  <div [@fadeInOut]>
+    <div class = "container">
+    <div class = "products_list">
+      <div class = "product_window box-column-product" *ngFor="let product of currentProducts" >
+        <div class = "product_image_box">
+          <img
+               class = "product_img special_img_incr" src = "../../assets/productsAlbum/{{product.image_url}}.png" alt = "{{product.name}}">
         </div>
+        <div class = "product_about">
+          <div class = "product_title">
+            <h3 class = "title">
+              <a class = "title_set" [title]="product.name + ' details'" [routerLink] = "['/product', product.id]">
+                {{ product.name }}
+              </a>
+            </h3>
+          </div>
 
+        </div>
+        <div class = "product_price_box box-row">
+          <p><span class = "product_price">
+                  {{product.price | currency: '₸'}}</span>
+          </p>
+    <!--      <p><span class = "rating_paragraph">Rating:</span> <span class = "rating">-->
+    <!--              {{product.rating}}-->
+    <!--            </span>-->
+    <!--      </p>-->
+          <ng-container *ngIf="!isLogged">
+            <div class = "buy_box box-row">
+              <p style="margin-left: 15px">AUTHORISE TO SHARE OR ORDER</p>
+            </div>
+          </ng-container>
+          <ng-container *ngIf="isLogged">
+            <div class = "buy_box box-row">
+              <button class = "buy_button order_button" style="cursor: pointer">Add</button>
+            </div>
+          </ng-container>
+        </div>
       </div>
-      <div class = "product_price_box box-row">
-        <p><span class = "product_price">
-                {{product.price | currency: '₸'}}</span>
-        </p>
-  <!--      <p><span class = "rating_paragraph">Rating:</span> <span class = "rating">-->
-  <!--              {{product.rating}}-->
-  <!--            </span>-->
-  <!--      </p>-->
-        <ng-container *ngIf="!isLogged">
-          <div class = "buy_box box-row">
-            <p style="margin-left: 15px">AUTHORISE TO SHARE OR ORDER</p>
-          </div>
-        </ng-container>
-        <ng-container *ngIf="isLogged">
-          <div class = "buy_box box-row">
-            <button class = "buy_button order_button" style="cursor: pointer">Add</button>
-          </div>
-        </ng-container>
-      </div>
+
     </div>
-
-  </div>
+    </div>
   </div>
 </div>

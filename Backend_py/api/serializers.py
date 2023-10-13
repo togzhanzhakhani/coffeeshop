@@ -60,6 +60,16 @@ class UserField(serializers.Field):
     def to_representation(self, value):
         return value.username
 
+
+class DateModel(serializers.Field):
+    # Fields and definitions here
+    def to_internal_value(self, data):
+        return Commentary.objects.get(created_at=data)
+
+    def to_representation(self, value):
+        return value.strftime("%b %d, %Y %H:%M:%S")
+
+
 class CommentSerializer(serializers.ModelSerializer):
     user = UserField()
 

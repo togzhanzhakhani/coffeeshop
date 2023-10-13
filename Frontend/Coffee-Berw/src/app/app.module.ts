@@ -13,6 +13,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
 import {RouterModule} from "@angular/router";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import {RouterModule} from "@angular/router";
     RegistrationComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
@@ -35,7 +37,8 @@ import {RouterModule} from "@angular/router";
       {path: 'basket', component: BasketComponent},
       {path: 'login', component: AuthenticationComponent},
       {path: 'registration', component: RegistrationComponent},
-      {path: 'user/:id/basket', component: BasketComponent}
+      {path: 'user/:id/basket', component: BasketComponent},
+      {path: 'product/:id', component: ProductDetailComponent}
     ])
   ],
   providers: [],

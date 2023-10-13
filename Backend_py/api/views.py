@@ -16,6 +16,16 @@ def list_of_products(request):
         serializer = ProductSerializer(product, many=True)
         return Response(serializer.data)
 
+@api_view(['GET'])
+def get_the_product(request, id):
+    try:
+        product = Product.objects.get(id=id)
+    except Product.DoesNotExist as e:
+        return Response({"error": str(e)}, status=status.HTTP_404_NOT_FOUND)
+    if request.method == 'GET':
+        serializer = ProductSerializer(product)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
 
 @api_view(['GET'])
 def list_of_types(request):
@@ -59,9 +69,9 @@ def comments_by_product(request, id):
         return Response(serializer.data)
 
 @api_view(['POST'])
-def comment_the_product_by_user(request, userId, productId):
+def comment_the_product_by_user(request, username, productId):
     try:
-        user = User.objects.get(id=userId)
+        user = User.objects.get(username=username)
         print(user.__str__())
     except User.DoesNotExist as e:
         return Response({"error": str(e)}, status=status.HTTP_404_NOT_FOUND)
@@ -76,6 +86,8 @@ def comment_the_product_by_user(request, userId, productId):
         if serializer.is_valid():
             serializer.save(product=product)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            print(serializer)
         return Response({"error": "Error posting comment"}, status=status.HTTP_406_NOT_ACCEPTABLE)
 
 
@@ -103,20 +115,6 @@ def product_ratings(request, id):
         ratings = product.rating.all()
         serializer = RatingSerializer(ratings, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
-
-    # try:
-    #     if request.method == 'POST':
-    #         try:
-    #             rating = Rating.objects.get(user__username=request.data.get('user'))
-    #         except:
-    #             return Response({"error": "cant post two times"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-    #         serializer = RatingSerializer(data=request.data)
-    #         if serializer.is_valid():
-    #             serializer.save(product=product)
-    #             return Response(serializer.data, status=status.HTTP_201_CREATED)
-    #         return Response({"error": "user"}, status=status.HTTP_406_NOT_ACCEPTABLE)
-    # except:
-    #     return Response({"error": "Something went wrong"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     try:
         if request.method == 'PUT':

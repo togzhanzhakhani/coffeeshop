@@ -85,3 +85,20 @@ class RatingSerializer(serializers.ModelSerializer):
         model = Rating
         fields = ('user', 'rating')
         read_only_fields = ('id', 'product')
+
+class ProductField(serializers.Field):
+    def to_internal_value(self, data):
+        return Product.objects.get(id=data)
+
+    def to_representation(self, value):
+        return ProductSerializer(value).data
+class OrderSerializer(serializers.ModelSerializer):
+    user = UserField()
+    products = ProductField()
+    class Meta:
+        model = Order
+        fields = ('user', 'products')
+
+
+
+

@@ -147,3 +147,43 @@ def find_user_by_username(request, username):
     if request.method == 'GET':
         data = {'id': user.id, 'username': user.username.__str__(), 'email':user.email.__str__()}
         return Response(data, status=status.HTTP_200_OK)
+
+
+@api_view(['GET', 'POST'])
+def order_of_the_user(request, username):
+    try:
+        user = User.objects.get(username=username)
+        print(user.__str__())
+    except User.DoesNotExist as e:
+        return Response({"error": str(e)}, status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        order = user.orders.all()
+        serializer = OrderSerializer(order, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    if request.method == 'POST':
+        order = user.orders.filter(products__id=request.data.get('products'))
+        if(len(order) > 0):
+            return Response({"error": "Already in basket"}, status=status.HTTP_400_BAD_REQUEST)
+        serializer = OrderSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response({"error": "Error posting order"}, status=status.HTTP_406_NOT_ACCEPTABLE)
+
+
+@api_view(['DELETE'])
+def delete_order(request, username, productId):
+    try:
+        user = User.objects.get(username=username)
+        print(user.__str__())
+    except User.DoesNotExist as e:
+        return Response({"error": str(e)}, status=status.HTTP_404_NOT_FOUND)
+    try:
+        product = Product.objects.get(id=productId)
+    except Product.DoesNotExist as e:
+        return Response({"error": str(e)}, status=status.HTTP_404_NOT_FOUND)
+    if request.method == 'DELETE':
+        order = Order.objects.filter(user__username =username, products__id=productId)
+        order.delete()
+        return Response({"delete": "Deleted successfully"})

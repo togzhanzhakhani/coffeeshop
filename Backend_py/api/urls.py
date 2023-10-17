@@ -17,5 +17,7 @@ urlpatterns = [
     path('user/<str:username>/commentaries/<int:productId>/', comment_the_product_by_user, name = 'POST commentaries for user'),
     path('user/login/', TokenObtainPairView.as_view(), name='token_obtain_pair_login'),
     path('user/register/', UserCreateView.as_view(), name='register_user'),
+    path('user/<str:username>/basket/', order_of_the_user, name="GET, POST, DELETE orders"),
+    path('user/<str:username>/basket/delete/<int:productId>/', delete_order, name="DELETE order"),
     path('user/<str:username>/', find_user_by_username, name='GET, info about user')
 ]

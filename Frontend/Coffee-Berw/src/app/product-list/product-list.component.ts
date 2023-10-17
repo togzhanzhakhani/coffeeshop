@@ -3,6 +3,7 @@ import {ProductService} from "../product.service";
 import {Product} from "../models/Product";
 import {AppComponent} from "../app.component";
 import {animate, state, style, transition, trigger} from "@angular/animations";
+import {BasketService} from "../basket.service";
 
 @Component({
   selector: 'app-product-list',
@@ -21,8 +22,10 @@ export class ProductListComponent implements OnInit{
   currentProducts!: Product[];
   isItemOnHover:boolean = false;
   isLogged = AppComponent.isLogged;
-
-  constructor(private productService: ProductService) {
+  username = AppComponent.username;
+  successAddToCardMessage:string = ""
+  constructor(private productService: ProductService,
+              private basketService: BasketService) {
   }
   ngOnInit(): void {
     this.productService.getAllProducts().subscribe((data)=>{
@@ -38,5 +41,19 @@ export class ProductListComponent implements OnInit{
 
   toggleSpecialItem(exp:boolean){
     this.isItemOnHover = exp;
+  }
+
+  addToCard(username:string, productId: number){
+    console.log(productId)
+    this.basketService.postOrderOfTheUser(username, productId).subscribe(
+      data=>{
+        this.successAddToCardMessage = "Product was added to your card " + productId
+      },
+      error => {
+        this.successAddToCardMessage = error +" "+ productId;
+        console.log(this.successAddToCardMessage)
+      }
+    )
+
   }
 }

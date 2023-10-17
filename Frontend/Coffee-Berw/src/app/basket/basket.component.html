@@ -1,14 +1,34 @@
 <app-top-bar></app-top-bar>
-<!--<ng-container *ngIf="isLogged">-->
-<!--  <h3>Orders:</h3>-->
-<!--  <div class = "cont">-->
-<!--    <div class = "products">-->
-<!--      <div class = "product" *ngFor = "let order of basketList">-->
-<!--        <p>{{order.total_price}} &#45;&#45;&#45;&#45; {{order.created_at}}</p>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</ng-container>-->
-<!--<ng-container *ngIf="!isLogged">-->
-<!--  <h2>Please Log In!</h2>-->
-<!--</ng-container>-->
+<ng-container *ngIf="isLogged">
+  <h1 style="text-align: center">Orders</h1>
+  <div class = "cont">
+    <div class = "products box-column">
+      <div class = "product box-row" *ngFor = "let order of basketList">
+        <div>
+          <img src = "../../assets/productsAlbum/{{order.products.name}}.png" class = "product_img">
+        </div>
+        <div class = "product_title" >
+          <h2>{{order.products.name}}</h2>
+        </div>
+        <div class = "product_price_box box-column">
+          <p><span class = "product_price">
+              {{order.products.price | currency: '₸'}}</span>
+          </p>
+        </div>
+        <div class = "operation_box box-column">
+          <div class = "delete_box box-row  ">
+            <button class = "delete_button" (click)="delete(order.products.id)">Delete</button>
+          </div>
+          <ng-container *ngIf = "this.deletedSuccessMessage">
+            <p>{{this.deletedSuccessMessage}}</p>
+          </ng-container>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</ng-container>
+<ng-container *ngIf="!isLogged">
+  <h2>Please Log In!</h2>
+</ng-container>

@@ -1,7 +1,7 @@
 
 <div class = "top_bar box-row">
   <div class = "logo">
-    <a [routerLink] = "['']"></a>
+    <a [routerLink] = "['']"><img src = "assets/webIcons/cup-hot-svgrepo-com.svg" class = "img_logo"></a>
   </div>
   <div class = "searching_panel">
     <input [(ngModel)] = "searchText"
@@ -11,21 +11,20 @@
     <a (click)="Search()" class = "search_button">Search</a>
   </div>
   <div class = "menu box-row">
+    <a [routerLink] = "['/basket']" style="width: 50px"><img src="assets/webIcons/cart-shopping-svgrepo-com.svg" class = "basket" alt=""></a>
     <ng-container *ngIf="isLogged">
       <div class = "box-row">
-        <div class = "basket-div">
-          <span [routerLink] = "['/basket']">Basket</span>
-        </div>
+
         <div class = "box-row LogOut" (click)="logout()">
-          <span class = "log-service">Sign Out</span>
+          <img class = "log-service" src="assets/webIcons/logout.svg" alt="log out">
         </div>
       </div>
     </ng-container>
     <ng-container *ngIf="!isLogged">
       <div class = "box-row">
         <a [routerLink] = "['/login']" class = "menu_tool box-row">
-
-          <span class = "log-service">Sign In</span>
+          <img id = "sign_in" class = "top_bar_buttons push" src = "assets/webIcons/login.svg">
+          <span class = "LogService">Sign In</span>
         </a>
       </div>
     </ng-container>

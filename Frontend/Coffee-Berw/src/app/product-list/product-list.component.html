@@ -2,7 +2,7 @@
 
 <div class = "box-column">
   <div>
-    <app-category ></app-category>
+    <app-category (productsFiltered)="onProductsFound($event)"></app-category>
   </div>
   <div [@fadeInOut]>
     <div class = "container">

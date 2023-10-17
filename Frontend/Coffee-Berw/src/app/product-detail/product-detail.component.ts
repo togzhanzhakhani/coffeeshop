@@ -29,10 +29,11 @@ export class ProductDetailComponent implements OnInit{
   username = AppComponent.username;
   clicked = false
   isLogged = AppComponent.isLogged;
+  successAddToCardMessage:string = ""
   constructor(private route: ActivatedRoute,
               private productService: ProductService,
               private commentService: CommentaryService,
-              private orderService: BasketService) {
+              private basketService: BasketService) {
   }
   ngOnInit(){
     const routeParams = this.route.snapshot.paramMap;
@@ -90,5 +91,19 @@ export class ProductDetailComponent implements OnInit{
       second: '2-digit'
     };
     return new Intl.DateTimeFormat('en-US', options).format(parsedDate);
+  }
+
+  addToCard(username:string, productId: number){
+    console.log(productId)
+    this.basketService.postOrderOfTheUser(username, productId).subscribe(
+      data=>{
+        this.successAddToCardMessage = "Product was added to your card " + productId
+      },
+      error => {
+        this.successAddToCardMessage = error +" "+ productId;
+        console.log(this.successAddToCardMessage)
+      }
+    )
+
   }
 }

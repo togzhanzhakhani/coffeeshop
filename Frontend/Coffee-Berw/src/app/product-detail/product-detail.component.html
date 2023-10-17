@@ -28,9 +28,12 @@
       </ng-container>
       <ng-container *ngIf="isLogged">
         <div class = "sharing_box box-row">
-          <button class = "sharing order_button" style = "margin-right: 30px" (click)="order(this.username, product.price)">Add</button>
+          <button class = "sharing order_button" style = "margin-right: 30px" (click)="addToCard(this.username, product.id)">Add</button>
 
         </div>
+        <ng-container *ngIf = "this.successAddToCardMessage.includes(product.id.toString())">
+          <p>{{this.successAddToCardMessage | slice:0:-2}}</p>
+        </ng-container>
       </ng-container>
     </div>
   </div>
@@ -41,6 +44,7 @@
     <ng-container *ngIf = "clicked">
       <h3 (click)="Click()" id = "click">Click to hide comments</h3>
     </ng-container>
+
     <div class = "give_comment">
       <input type = "text"
              placeholder = "Do you want to comment?"
@@ -49,6 +53,12 @@
       <button type="submit" class = "submitComment" (click)="submit(this.commentFromUser)">Submit</button>
     </div>
   </div>
+
+  <ng-container *ngIf="!isLogged">
+    <div class = "sharing_box box-row">
+      <p>YOU NEED TO AUTHORISE TO SEND MESSAGES</p>
+    </div>
+  </ng-container>
   <ng-container *ngIf = "clicked">
     <div [@fadeInOut]>
       <div class = "commentary">

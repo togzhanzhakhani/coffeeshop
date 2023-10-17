@@ -27,11 +27,10 @@ export class BasketComponent implements OnInit{
   delete(productId:number){
     this.basketService.deleteOrderOfTheUser(this.username, productId).subscribe(
       data=>{
-        console.log(data);
-        this.deletedSuccessMessage = data.delete + ". Reloading page";
+        this.deletedSuccessMessage = data.delete + ". Reloading page " + productId;
         setTimeout(function (){
           window.location.reload();
-        }, 2000)
+        }, 1000)
 
       }
     )

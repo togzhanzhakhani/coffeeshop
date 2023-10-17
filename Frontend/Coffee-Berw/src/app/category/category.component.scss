@@ -1,0 +1,56 @@
+.box{
+  padding: 10px;
+  padding-top: 20px;
+  margin-left: 10px;
+}
+.custom-select {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  padding-right: 40px;
+}
+.centered-selects {
+  display: flex;
+  justify-content: center;
+}
+.select-label{
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.select-selected {
+  color: white;
+  background-color: #1d2021;
+  padding: 10px;
+  border: 1px solid #111213;
+  cursor: pointer;
+  border-radius: 7px;
+}
+.select-hide{
+  display: none;
+}
+
+.select-items {
+  position: absolute;
+  color: white;
+  background-color: #1d2021;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 7px;
+}
+
+.select-items div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.select-items div:hover {
+  background-color: #141616;
+  border-radius: 7px;
+}
+
+.select-hide {
+  display: none;
+}
+

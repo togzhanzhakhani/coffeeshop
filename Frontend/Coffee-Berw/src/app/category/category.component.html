@@ -1,1 +1,27 @@
-<p>category works!</p>
+<div class="centered-selects">
+  <div class="box">
+    <span class="select-label">Type:</span>
+    <div class="custom-select" (click)="toggleDropdown('type')">
+
+      <div class="select-selected">
+        {{selectedType || 'None' }}
+      </div>
+      <div class="select-items" [ngClass]="{ 'select-hide': !isDropdownOpen.type }">
+        <div *ngFor="let type of types" (click)="selectType($event, type.type)">{{ type.type }}</div>
+      </div>
+
+
+    </div>
+  </div>
+  <div class="box">
+    <span class="select-label">Sort:</span>
+    <div class="custom-select" (click)="toggleDropdown('sort')">
+      <div class="select-selected">
+        {{ selectedSort || 'None' }}
+      </div>
+      <div class="select-items" [ngClass]="{ 'select-hide': !isDropdownOpen.sort }">
+        <div *ngFor="let sort of sorts" (click)="selectSort($event, sort.sort)">{{ sort.sort }}</div>
+      </div>
+    </div>
+  </div>
+</div>

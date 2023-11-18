@@ -22,10 +22,19 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
+        stage('Local Deployment') {
             steps {
-                echo 'Deploying the application...'
+                script {
+                    echo 'Running Django server locally...'
+                    bat 'cd Backend_py && python manage.py runserver'
+
+                    sleep time: 20, unit: 'SECONDS'
+
+                    echo 'Running Angular locally...'
+                    bat 'cd Frontend/Coffee-Berw && ng serve'
+                }
             }
         }
+
     }
 }

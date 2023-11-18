@@ -5,7 +5,6 @@ from rest_framework.test import APIClient
 from .models import Product, Type, Sort, Category
 from .serializers import ProductSerializer
 
-#tests
 class ProductTests(TestCase):
     def setUp(self):
         type_obj = Type.objects.create(type='Some Type')

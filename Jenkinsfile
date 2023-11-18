@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    triggers {
+        githubPush()
+    }
     stages {
         stage('Build Angular') {
             steps {
@@ -39,7 +41,5 @@ pipeline {
 
     }
 
-    triggers {
-        githubPush()
-    }
+    
 }

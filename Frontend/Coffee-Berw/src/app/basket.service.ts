@@ -31,7 +31,6 @@ export class BasketService {
       if (error.error && error.error.error) {
         return throwError(error.error.error);
       } else {
-        // Handle other types of errors (generic error message)
         return throwError('Something went wrong. Please try again later.');
       }
     }

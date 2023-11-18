@@ -29,8 +29,4 @@ export class ProductService {
     //   catchError(this.handleError)
     // );
   }
-
-  // private handleError(error: HttpErrorResponse){
-  //   return error
-  // }
 }

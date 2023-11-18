@@ -43,20 +43,6 @@ def list_of_sorts(request):
         return Response(serializer.data)
 
 
-# @api_view(['GET'])
-# def list_of_commentaries_of_a_product(request, id):
-#     try:
-#         product = Product.objects.get(id=id)
-#     except Product.DoesNotExist as e:
-#         return Response({"error" : str(e)}, status=status.HTTP_400_BAD_REQUEST)
-#
-#     if request.method == 'GET':
-#         commentaries =product.comments.all()
-#         serializer = CommentSerializer(commentaries, many=True)
-#         return Response(serializer.data)
-
-
-
 @api_view(['GET'])
 def comments_by_product(request, id):
     try:
@@ -98,7 +84,6 @@ def get_comment_of_a_user(request, productId, userId):
     except:
         return Response({'error': 'Product not Found'}, status=status.HTTP_400_BAD_REQUEST)
     if request.method == 'GET':
-        # comments = product.comments.all()
         comments = Commentary.objects.filter(user__id=userId, product__id=productId)
         serializer = CommentSerializer(comments, many=True)
         return Response(serializer.data)

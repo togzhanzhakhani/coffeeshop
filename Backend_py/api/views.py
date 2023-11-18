@@ -6,8 +6,6 @@ from rest_framework import generics
 
 from .serializers import *
 from .models import *
-# Create your views here.
-
 
 @api_view(['GET'])
 def list_of_products(request):

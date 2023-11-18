@@ -6,8 +6,9 @@ pipeline {
             steps {
                 dir('Frontend/Coffee-Berw') {
                     echo 'Building Angular app...'
-                    sh 'npm install'
-                    sh 'ng build'
+                    bat 'npm install'
+                    bat 'ng build'
+
                 }
             }
         }
@@ -16,7 +17,7 @@ pipeline {
             steps {
                 dir('Backend_py') {
                     echo 'Running Django tests...'
-                    sh 'python manage.py test'
+                    bat 'python manage.py test'
                 }
             }
         }

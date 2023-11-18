@@ -26,15 +26,16 @@ pipeline {
             steps {
                 script {
                     echo 'Running Django server locally...'
-                    bat 'cd Backend_py && python manage.py runserver'
+                    bat 'cd Backend_py && start cmd /c "python manage.py runserver"'
 
                     sleep time: 10, unit: 'SECONDS'
 
                     echo 'Running Angular locally...'
-                    bat 'cd Frontend/Coffee-Berw && ng serve'
+                    bat 'cd Frontend/Coffee-Berw && start cmd /c "ng serve"'
                 }
             }
         }
+
 
     }
 
